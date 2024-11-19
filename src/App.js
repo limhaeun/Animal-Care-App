@@ -1,21 +1,22 @@
-import React, {Component} from 'react'
+import React from 'react'
 import './App.css';
-import Customer from './components/Customer';
-import { render } from '@testing-library/react';
+import {Route,Routes} from 'react-router-dom';
+
+import MainForm from './components/MainForm/MainForm';
+import MessageForm from './components/MessageForm/MessageForm';
 import LoginForm from './components/LoginForm/LoginForm';
 
-const customer = {
-  'name' : '홍길동',
-  'birth' : '960614',
-  'gender' : '남성'
-}
-
-class App extends Component {
-  render(){
+function App() {
     return (
-      <LoginForm/>
+            <Routes>
+              
+              <Route path='/main' element={<MainForm/>}></Route>
+              <Route path='/message' element={<MessageForm/>}></Route>
+              <Route path='/login' element={<LoginForm/>}></Route>
+              <Route path='/' element={<MainForm/>}></Route>
+              
+            </Routes>
     );
-  }
 }
 
 export default App;
