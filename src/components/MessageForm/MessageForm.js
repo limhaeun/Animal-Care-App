@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react';
 
-const MessageForm = () =>{
+const MessageForm =()=>{
+
     return(
-       <div>test</div>
+        <a id="chat-channel-button" href="javascript:chatChannel()">
+		    <img src="/images/consult_small_yellow_pc.png"/>
+	    </a>
+
     );
 }
 
-export default MessageForm;
+export default MessageForm 
